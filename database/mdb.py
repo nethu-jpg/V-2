@@ -6,7 +6,7 @@
 import re
 import pymongo
 
-from pymongo.errors import 
+from pymongo.errors import DuplicateKeyError
 from marshmallow.exceptions import ValidationError
 
 from config import DATABASE_URI, DATABASE_NAME
