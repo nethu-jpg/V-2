@@ -31,7 +31,7 @@ async def filter(client: Bot, message: Message):
     if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
         return
 
-    if 2 < len(message.text) < 50:    
+    if 2 < len(message.text) < 100:    
         btn = []
 
         group_id = message.chat.id
