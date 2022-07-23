@@ -63,13 +63,13 @@ async def filter(client: Bot, message: Message):
                 [InlineKeyboardButton(text="🔰 Pages 1/1 🔰",callback_data="pages")]
             )
             buttons.append(
-                [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_By_KP/90")]
+                [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_Zone_KP/3")]
             )
             buttons.append(
                 [InlineKeyboardButton("❣️ VIP All Series ❣️", url="https://t.me/Kpautoreply_bot")]
             )
             await message.reply_text(
-                f"<b> Hello {message.from_user.mention}</b>\n\n<b>သင်ရှာတာ 👉🏻 {message.text} 👈🏻  က ကျနော်ရှာတွေ့တာပြပေးထားပါတယ်ခင်ဗျာ ☺️ ......</b>\n\n<b>Request by :{message.from_user.mention}</b>\n\n<b>Join Main Channel \nK-Series👉🏻 @MKSVIPLINK \n  Movie  👉🏻@KPMOVIELIST</b>",
+                f"<b>🤗 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️♥️👌 ......\n\n<b>💠Request by :{message.from_user.mention}</b>\n\n<b>Join Main Channel \nK-Series👉🏻 @MKSVIPLINK \n  Movie  👉🏻@KPMOVIELIST</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
             return
@@ -84,14 +84,14 @@ async def filter(client: Bot, message: Message):
             [InlineKeyboardButton(text=f"🔰 Pages 1/{data['total']} 🔰",callback_data="pages")]
         )
         buttons.append(
-            [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_By_KP/90")]
+            [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_Zone_KP/3")]
         )
         buttons.append(
             [InlineKeyboardButton("❣️ VIP All Series ❣️", url="https://t.me/Kpautoreply_bot")]
         )
 
         await message.reply_text(
-                f"<b>Hello {message.from_user.mention}</b>\n\n<b>သင်ရှာတာ 👉🏻 {message.text} 👈🏻  က ကျနော်ရှာတွေ့တာပြပေးထားပါတယ်ခင်ဗျာ ☺️ ......</b>\n\n<b>Request by :{message.from_user.mention}</b>\n\n<b>Join Main Channel \nK-Series👉🏻 @MKSVIPLINK \n  Movie  👉🏻@KPMOVIELIST</b>",
+                f"<b>🤗 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️♥️👌 ......\n\n<b>💠Request by :{message.from_user.mention}</b>\n\n<b>Join Main Channel \nK-Series👉🏻 @MKSVIPLINK \n  Movie  👉🏻@KPMOVIELIST</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )    
 
@@ -122,7 +122,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton(f"🔰 Pages {int(index)+2}/{data['total']} 🔰", callback_data="pages")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_By_KP/90")]
+                    [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("❣️ VIP All Series ❣️", url="https://t.me/Kpautoreply_bot")]
@@ -142,7 +142,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton(f"🔰 Pages {int(index)+2}/{data['total']} 🔰", callback_data="pages")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_By_KP/90")]
+                    [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("❣️ VIP All Series ❣️", url="https://t.me/Kpautoreply_bot")]
@@ -173,7 +173,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton(f"🔰 Pages {int(index)}/{data['total']} 🔰", callback_data="pages")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_By_KP/90")]
+                    [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("❣️ VIP All Series ❣️", url="https://t.me/Kpautoreply_bot")]
@@ -193,7 +193,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton(f"🔰 Pages {int(index)}/{data['total']} 🔰", callback_data="pages")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_By_KP/90")]
+                    [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("❣️ VIP All Series ❣️", url="https://t.me/Kpautoreply_bot")]
@@ -244,7 +244,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             keyboard = InlineKeyboardMarkup([
                 [InlineKeyboardButton("BACK", callback_data="help_data"),
                     InlineKeyboardButton("START", callback_data="start_data")],
-                [InlineKeyboardButton(" ❣️ SOURCE CODE ❣️", url="https://t.me/kopaing15")]
+                [InlineKeyboardButton(" ❣️ SOURCE CODE ❣️", url="https://t.me/Painglay15")]
             ])
 
             await query.message.edit_text(
