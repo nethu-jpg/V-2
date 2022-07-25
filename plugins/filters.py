@@ -263,7 +263,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             await query.message.delete()
 
     else:
-        await query.answer("🙄🙄 ဟင်းဟင်း သူများရိုက်ထားတာလေ 😏😏\n\n😎  နှိပ် ချင်ရင် ဂရုထဲ ကွကိုရိုက်ပါ 😎!!\n\nUploaded By :Ko Paing ❣️",show_alert=True)
+        await query.answer("🙄ဟင်းဟင်း သူများရိုက်ထားတာလေ\n\n😎  နှိပ် ချင်ရင် ဂရုထဲ ကွကိုရိုက်ပါ 😎!!\n\nUploaded By :Ko Paing ❣️",show_alert=True)
 
 
 def split_list(l, n):
