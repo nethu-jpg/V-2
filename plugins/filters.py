@@ -69,7 +69,7 @@ async def filter(client: Bot, message: Message):
                 [InlineKeyboardButton("⚠️ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ⚠️", url="https://t.me/Movie_Zone_KP/3")]
             )
             await message.reply_text(
-                f"<b>🤗 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️♥️👌 ......\n\n<b>💠 Request by : {message.from_user.mention}</b>\n\n<b>💠 Join Main Channel \n💠 K-Series  👉🏻 @MKSVIPLINK \n💠 Movie      👉🏻 @KPMOVIELIST</b>\n</b>💠 Uploaded By   : Ko Paing Lay 🥰</a>",
+                f"<b>⚜️ ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌...\n\n<b>⚜️ Request by : {message.from_user.mention}</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ Uploaded By   : Ko Paing Lay 🥰</a>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
             return
@@ -91,7 +91,7 @@ async def filter(client: Bot, message: Message):
         )
 
         await message.reply_text(
-                f"<b>🤗 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️♥️👌 ......\n\n<b>💠 Request by : {message.from_user.mention}</b>\n\n<b>💠 Join Main Channel \n💠 K-Series  👉🏻 @MKSVIPLINK \n💠 Movie      👉🏻 @KPMOVIELIST</b>\n</b>💠 Uploaded By   : Ko Paing Lay 🥰</a>",
+                f"<b>🤗 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌 .\n\n<b>⚜️ Request by : {message.from_user.mention}</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ Uploaded By   : Ko Paing Lay 🥰</a>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )    
 
