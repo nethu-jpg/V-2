@@ -41,7 +41,7 @@ async def filter(client: Bot, message: Message):
         if filenames and links:
             for filename, link in zip(filenames, links):
                 btn.append(
-                    [InlineKeyboardButton(text=f"♻️ {filename}",url=f"{link}")]
+                    [InlineKeyboardButton(text=f"💁🏼 {filename}",url=f"{link}")]
             )
            
         else:
@@ -52,7 +52,7 @@ async def filter(client: Bot, message: Message):
 
         if len(btn) > 10: 
             btns = list(split_list(btn, 6)) 
-            keyword = f"♻️ {message.chat.id}-{message.message_id}"
+            keyword = f"💁🏼 {message.chat.id}-{message.message_id}"
             BUTTONS[keyword] = {
                 "total" : len(btns),
                 "buttons" : btns
