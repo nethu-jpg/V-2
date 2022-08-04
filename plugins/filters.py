@@ -50,8 +50,8 @@ async def filter(client: Bot, message: Message):
         if not btn:
             return
 
-        if len(btn) > 6: 
-            btns = list(split_list(btn, 10)) 
+        if len(btn) > 10: 
+            btns = list(split_list(btn, 6)) 
             keyword = f"♻️ {message.chat.id}-{message.message_id}"
             BUTTONS[keyword] = {
                 "total" : len(btns),
@@ -60,7 +60,7 @@ async def filter(client: Bot, message: Message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
+                [InlineKeyboardButton("❌ ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ ❌", url="https://t.me/Movie_Zone_KP/3")]
             )
             buttons.append(
                 [InlineKeyboardButton(text="🔰 𝗣𝗔𝗚𝗘  1/1 🔰",callback_data="pages")]
@@ -78,7 +78,7 @@ async def filter(client: Bot, message: Message):
         buttons = data['buttons'][0].copy()
 
         buttons.append(
-            [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
+            [InlineKeyboardButton("❌ ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ ❌", url="https://t.me/Movie_Zone_KP/3")]
         )    
         buttons.append(
             [InlineKeyboardButton(text=f"🔰 𝗣𝗔𝗚𝗘 1/{data['total']} 🔰",callback_data="pages"),InlineKeyboardButton(text="𝐍𝐞𝐱𝐭 𝐏𝐚𝐠𝐞 ⏩",callback_data=f"next_0_{keyword}")]
@@ -113,7 +113,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
+                    [InlineKeyboardButton("❌ ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ ❌", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞 𝗣𝗔𝗚𝗘", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"🔰 𝗣𝗔𝗚𝗘 {int(index)+2}/{data['total']} 🔰", callback_data="pages")]
@@ -131,10 +131,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 buttons = data['buttons'][int(index)+1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
+                    [InlineKeyboardButton("❌ ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ ❌", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞 𝗣𝗔𝗚𝗘", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"🔰 𝗣𝗔𝗚𝗘 {int(index)+2}/{data['total']} 🔰", callback_data="pages"),InlineKeyboardButton("𝐍𝐞𝐱𝐭 𝐏𝐚𝐠𝐞 ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"🔰 𝗣𝗔𝗚𝗘 {int(index)+2}/{data['total']} 🔰", callback_data="pages"),InlineKeyboardButton("𝐍𝐞𝐱𝐭 ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
@@ -160,7 +160,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
+                    [InlineKeyboardButton("❌ ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ ❌", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("𝐍𝐞𝐱𝐭 𝐏𝐚𝐠𝐞 ⏩", callback_data=f"next_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"🔰 𝗣𝗔𝗚𝗘 {int(index)}/{data['total']} 🔰", callback_data="pages")]
@@ -178,10 +178,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
+                    [InlineKeyboardButton("❌ ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ ❌", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞 𝗣𝗔𝗚𝗘", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"🔰 𝗣𝗔𝗚𝗘 {int(index)}/{data['total']} 🔰", callback_data="pages"),InlineKeyboardButton("𝐍𝐞𝐱𝐭 𝐏𝐚𝐠𝐞 ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
+                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"🔰 𝗣𝗔𝗚𝗘 {int(index)}/{data['total']} 🔰", callback_data="pages"),InlineKeyboardButton("𝐍𝐞𝐱𝐭 ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
