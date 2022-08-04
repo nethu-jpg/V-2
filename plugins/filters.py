@@ -160,7 +160,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 buttons = data['buttons'][int(index)-1].copy()
 
                 buttons.append(
-                    [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]]
+                    [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("𝓝𝓔𝓧𝓣 𝓟𝓐𝓖𝓔 ⏩", callback_data=f"next_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"🔰 🅿🅰🅶🅴🆂 {int(index)}/{data['total']} 🔰", callback_data="pages")]
