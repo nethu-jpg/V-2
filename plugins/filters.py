@@ -63,10 +63,10 @@ async def filter(client: Bot, message: Message):
                 [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
             )
             buttons.append(
-                [InlineKeyboardButton(text="🔰 🅿🅰🅶🅴🆂  1/1 🔰",callback_data="pages")]
+                [InlineKeyboardButton(text="🔰 𝗣𝗔𝗚𝗘  1/1 🔰",callback_data="pages")]
             )
             buttons.append(
-                [InlineKeyboardButton("👉🏻 𝓥𝓘𝓟 𝓢𝓮𝓻𝓲𝓮𝓼 𝓜𝓮𝓶𝓫𝓮𝓻 ဝင်ရန် 👌🏻", url="https://t.me/Kpautoreply_bot")]
+                [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌🏻", url="https://t.me/Kpautoreply_bot")]
             )
             await message.reply_text(
                 f"<b>🙋🏼 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌...\n\n<b>🙋🏼 Request by : {message.from_user.mention}</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>",
@@ -81,10 +81,10 @@ async def filter(client: Bot, message: Message):
             [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"🔰 🅿🅰🅶🅴🆂 1/{data['total']} 🔰",callback_data="pages"),InlineKeyboardButton(text="𝓝𝓔𝓧𝓣 𝓟𝓐𝓖𝓔 ⏩",callback_data=f"next_0_{keyword}")]
+            [InlineKeyboardButton(text=f"🔰 𝗣𝗔𝗚𝗘 1/{data['total']} 🔰",callback_data="pages"),InlineKeyboardButton(text="𝐍𝐞𝐱𝐭 𝐏𝐚𝐠𝐞 ⏩",callback_data=f"next_0_{keyword}")]
         )
         buttons.append(
-            [InlineKeyboardButton("👉🏻 𝓥𝓘𝓟 𝓢𝓮𝓻𝓲𝓮𝓼 𝓜𝓮𝓶𝓫𝓮𝓻 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
+            [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
         )
 
         await message.reply_text(
@@ -116,10 +116,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⏪ 𝓑𝓐𝓒𝓚 𝓟𝓐𝓖𝓔", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"🔰 🅿🅰🅶🅴🆂 {int(index)+2}/{data['total']} 🔰", callback_data="pages")]
+                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞 𝗣𝗔𝗚𝗘", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"🔰 𝗣𝗔𝗚𝗘 {int(index)+2}/{data['total']} 🔰", callback_data="pages")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("👉🏻 𝓥𝓘𝓟 𝓢𝓮𝓻𝓲𝓮𝓼 𝓜𝓮𝓶𝓫𝓮𝓻 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
+                    [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
                 )
                
 
@@ -134,10 +134,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⏪ 𝓑𝓐𝓒𝓚 𝓟𝓐𝓖𝓔", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"🔰 🅿🅰🅶🅴🆂 {int(index)+2}/{data['total']} 🔰", callback_data="pages"),InlineKeyboardButton("𝓝𝓔𝓧𝓣 𝓟𝓐𝓖𝓔 ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞 𝗣𝗔𝗚𝗘", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"🔰 𝗣𝗔𝗚𝗘 {int(index)+2}/{data['total']} 🔰", callback_data="pages"),InlineKeyboardButton("𝐍𝐞𝐱𝐭 𝐏𝐚𝐠𝐞 ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("👉🏻 𝓥𝓘𝓟 𝓢𝓮𝓻𝓲𝓮𝓼 𝓜𝓮𝓶𝓫𝓮𝓻 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
+                    [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
                 )
                 
 
@@ -163,10 +163,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("𝓝𝓔𝓧𝓣 𝓟𝓐𝓖𝓔 ⏩", callback_data=f"next_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"🔰 🅿🅰🅶🅴🆂 {int(index)}/{data['total']} 🔰", callback_data="pages")]
+                    [InlineKeyboardButton("𝐍𝐞𝐱𝐭 𝐏𝐚𝐠𝐞 ⏩", callback_data=f"next_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"🔰 𝗣𝗔𝗚𝗘 {int(index)}/{data['total']} 🔰", callback_data="pages")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("👉🏻 𝓥𝓘𝓟 𝓢𝓮𝓻𝓲𝓮𝓼 𝓜𝓮𝓶𝓫𝓮𝓻 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
+                    [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
                 )
                 
   
@@ -181,10 +181,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("🙅 ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ 🙅", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⏪ 𝓑𝓐𝓒𝓚 𝓟𝓐𝓖𝓔", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"🔰 🅿🅰🅶🅴🆂 {int(index)}/{data['total']} 🔰", callback_data="pages"),InlineKeyboardButton("𝓝𝓔𝓧𝓣 𝓟𝓐𝓖𝓔 ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
+                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞 𝗣𝗔𝗚𝗘", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"🔰 𝗣𝗔𝗚𝗘 {int(index)}/{data['total']} 🔰", callback_data="pages"),InlineKeyboardButton("𝐍𝐞𝐱𝐭 𝐏𝐚𝐠𝐞 ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("👉🏻 𝓥𝓘𝓟 𝓢𝓮𝓻𝓲𝓮𝓼 𝓜𝓮𝓶𝓫𝓮𝓻 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
+                    [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
                 )
                
                 await query.edit_message_reply_markup( 
