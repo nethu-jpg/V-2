@@ -134,7 +134,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("❌ ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ ❌", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"🔰𝗣𝗔𝗚𝗘 {int(index)+2}/{data['total']}", callback_data="pages"),InlineKeyboardButton("𝐍𝐞𝐱𝐭 ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
+                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"𝗣𝗔𝗚𝗘 {int(index)+2}/{data['total']}", callback_data="pages"),InlineKeyboardButton("𝐍𝐞𝐱𝐭 ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
@@ -181,7 +181,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("❌ ဝင်မရရင်ဒီကိုနှိပ်ပြီး Link Join ပါ ❌", url="https://t.me/Movie_Zone_KP/3")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"🔰𝗣𝗔𝗚𝗘 {int(index)}/{data['total']}", callback_data="pages"),InlineKeyboardButton("𝐍𝐞𝐱𝐭 ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
+                    [InlineKeyboardButton("⏪ 𝗕𝗔𝗖𝗞", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"𝗣𝗔𝗚𝗘 {int(index)}/{data['total']}", callback_data="pages"),InlineKeyboardButton("𝐍𝐞𝐱𝐭 ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
                     [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
