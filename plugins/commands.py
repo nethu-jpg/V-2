@@ -22,10 +22,23 @@ async def start(client, message):
                     ],
                     [
                         InlineKeyboardButton(
-                            "⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/MKSVIPLINK"),
+                            "⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/Movie_Zone_KP/3"),
                     ],
                     [
-                        InlineKeyboardButton("⭕️ Group ⭕️ ", url="https://t.me/MKS_RequestGroup")
+                        InlineKeyboardButton('💠 English Series 💠', url='https://t.me/Serieslists'), 
+                        InlineKeyboardButton('💠 Thai Series💠', url='https://t.me/ThaiSeries_MTS')
+                    ],
+                    [
+                        InlineKeyboardButton('💠 Chinese Series💠', url='https://t.me/Chinese_Series_MCS'), 
+                        InlineKeyboardButton('💠 Anime Series💠', url='https://t.me/Anime_Animation_Series')
+                    ],
+                    [
+                        InlineKeyboardButton('💠 Bollywood Series💠', url='https://t.me/+1-VidI6DzaA0MDA1'),
+                        InlineKeyboardButton('💠 Korean Series💠', url='https://t.me/MKSVIPLINK')
+                    ],
+                    [
+                        InlineKeyboardButton('💠 Request Group 💠', url='https://t.me/MKS_REQUESTGroup'),
+                        InlineKeyboardButton('💠 VIP All Series  💠', url='https://t.me/Kpautoreply_bot')
                     ]
                 ]
             ),
@@ -48,10 +61,23 @@ async def help(client, message):
                     ],
                     [
                         InlineKeyboardButton(
-                            "⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/MKSVIPLINK"),
+                            "⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/Movie_Zone_KP/3"),
                     ],
                     [
-                        InlineKeyboardButton("⭕️ Group ⭕️ ", url="https://t.me/MKS_RequestGroup")
+                        InlineKeyboardButton('💠 English Series 💠', url='https://t.me/Serieslists'), 
+                        InlineKeyboardButton('💠 Thai Series💠', url='https://t.me/ThaiSeries_MTS')
+                    ],
+                    [
+                        InlineKeyboardButton('💠 Chinese Series💠', url='https://t.me/Chinese_Series_MCS'), 
+                        InlineKeyboardButton('💠 Anime Series💠', url='https://t.me/Anime_Animation_Series')
+                    ],
+                    [
+                        InlineKeyboardButton('💠 Bollywood Series💠', url='https://t.me/+1-VidI6DzaA0MDA1'),
+                        InlineKeyboardButton('💠 Korean Series💠', url='https://t.me/MKSVIPLINK')
+                    ],
+                    [
+                        InlineKeyboardButton('💠 Request Group 💠', url='https://t.me/MKS_REQUESTGroup'),
+                        InlineKeyboardButton('💠 VIP All Series  💠', url='https://t.me/Kpautoreply_bot')
                     ]
                 ]
             ),
@@ -74,12 +100,27 @@ async def about(client, message):
                     ],
                     [
                         InlineKeyboardButton(
-                            "⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/MKSVIPLINK"),
-                        InlineKeyboardButton("⭕️ Group ⭕️ ", url="https://t.me/MKS_RequestGroup"),
+                            "⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/Movie_Zone_KP/3"),
+                    ],
+                    [
+                        InlineKeyboardButton('💠 English Series 💠', url='https://t.me/Serieslists'), 
+                        InlineKeyboardButton('💠 Thai Series💠', url='https://t.me/ThaiSeries_MTS')
+                    ],
+                    [
+                        InlineKeyboardButton('💠 Chinese Series💠', url='https://t.me/Chinese_Series_MCS'), 
+                        InlineKeyboardButton('💠 Anime Series💠', url='https://t.me/Anime_Animation_Series')
+                    ],
+                    [
+                        InlineKeyboardButton('💠 Bollywood Series💠', url='https://t.me/+1-VidI6DzaA0MDA1'),
+                        InlineKeyboardButton('💠 Korean Series💠', url='https://t.me/MKSVIPLINK')
+                    ],
+                    [
+                        InlineKeyboardButton('💠 Request Group 💠', url='https://t.me/MKS_REQUESTGroup'),
+                        InlineKeyboardButton('💠 VIP All Series  💠', url='https://t.me/Kpautoreply_bot')
                     ],
                     [
                         InlineKeyboardButton(
-                            "SOURCE CODE", url="https://t.me/kopaing15")
+                            "SOURCE CODE", url="https://t.me/kopainglay15")
                     ]
                 ]
             ),
