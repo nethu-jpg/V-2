@@ -1,7 +1,7 @@
 class script(object):
 
 
-    START_MSG = """ <b>ဟေလူ {} 
+    START_MSG = """ <b>ဟေလူ  {} 
 
 ဘာလာရှာတာလဲ ?
 
@@ -9,7 +9,9 @@ class script(object):
 
 Delivery နဲ့ ပါဆယ်ပိုပေးလိုက်မယ်။ Ok လား? 😂😂
 
-@KOPAING15 <i>-Contact Me</i></b>"""
+Join Group - https://t.me/MKS_RequestGroup
+
+@KOPAINGLAY15 <i>- Contact Me</i></b>"""
 
 
     HELP_MSG = """<b>How to use the bot??</b>
@@ -51,12 +53,12 @@ No need add each filter again!
 Bot will automatically search for your files and give links to that!
 
 
-<b>© @KOPAING15</b>"""
+<b>© @KOPAINGLAY15</b>"""
 
 
     ABOUT_MSG = """⭕️<b>My Name : KO PAing </b>
     
-⭕️<b>Creater :</b> @KOPAING15
+⭕️<b>Creater :</b> @KOPAINGLAY15
 
 ⭕️<b>Language :</b> <code>Python3</code>
 
