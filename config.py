@@ -62,17 +62,16 @@ def LOGGER(name: str) -> logging.Logger:
 
 
 
-IMDB_TEXT = """📺 **Movie** : **{title}**
+IMDB_TEXT = """**Hey {user} Your {query} is Ready** 🍁
+
+__📺 **Movie** : **{title}**
 📆 **Year** : {year}
 🎙️ **Audio** : {languages}
 🏃 **Time** : {runtime} Minutes
 🌟 **Rating** : {rating}/10
-🔖 **Genres** : {genres}"""
+🔖 **Genres** : {genres}__
 
-
-
-
-
+**🙋🏼 Request by : {user}** """
 
 
 
