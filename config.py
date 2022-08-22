@@ -59,3 +59,21 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
+
+
+
+IMDB_TEXT = """📺 **Movie** : **{title}**
+📆 **Year** : {year}
+🎙️ **Audio** : {languages}
+🏃 **Time** : {runtime} Minutes
+🌟 **Rating** : {rating}/10
+🔖 **Genres** : {genres}"""
+
+
+
+
+
+
+
+
+
