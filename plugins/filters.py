@@ -69,6 +69,9 @@ async def filter(client: Bot, message: Message):
             buttons.append(
                 [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌🏻", url="https://t.me/Kpautoreply_bot")]
             )
+            buttons.append(
+                [InlineKeyboardButton("🍁 PLEASE JOIN TO GET MOVIE'S 🚀", url="https://t.me/Movie_Zone_KP/3")]
+            )
             omdb=await get_posters(name)
             poster = omdb["poster"]
             await client.send_photo(
@@ -93,6 +96,9 @@ async def filter(client: Bot, message: Message):
         buttons.append(
             [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
         )
+        buttons.append(
+                [InlineKeyboardButton("🍁 PLEASE JOIN TO GET MOVIE'S 🚀", url="https://t.me/Movie_Zone_KP/3")]
+            )
         omdb=await get_posters(name)
         poster = omdb["poster"]
         await client.send_photo(
