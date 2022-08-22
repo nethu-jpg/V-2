@@ -22,7 +22,8 @@ from bot import Bot
 from script import script
 from database.mdb import searchquery
 from plugins.channel import deleteallfilters
-from config import AUTH_USERS
+from config import AUTH_USERS, IMDB_TEXT
+from Omdb import get_posters
 
 BUTTONS = {}
 
@@ -68,8 +69,13 @@ async def filter(client: Bot, message: Message):
             buttons.append(
                 [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌🏻", url="https://t.me/Kpautoreply_bot")]
             )
-            await message.reply_text(
-                f"<b>🙋🏼 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌...\n\n<b>🙋🏼 Request by : {message.from_user.mention}</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>",
+            omdb=await get_posters(name)
+            poster = omdb["poster"]
+            await client.send_photo(
+                chat_id=message.chat.id,
+                photo=poster,
+                caption=IMDB_TEXT.format(mention=message.from_user.mention, query=name, title=omdb['title'], trailer=omdb["trailer"], runtime=omdb["runtime"], languages=omdb["languages"], genres=omdb['genres'], year=omdb['year'], rating=omdb['rating'], url=omdb['url'])                   
+                #f"<b>🙋🏼 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌...\n\n<b>🙋🏼 Request by : {message.from_user.mention}</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
             return
@@ -86,12 +92,17 @@ async def filter(client: Bot, message: Message):
         buttons.append(
             [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
         )
-
-        await message.reply_text(
-                f"<b>🙋🏼 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌 .\n\n<b>🙋🏼 Request by : {message.from_user.mention}</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>",
-                reply_markup=InlineKeyboardMarkup(buttons)
-            )    
-
+        omdb=await get_posters(name)
+        poster = omdb["poster"]
+        await client.send_photo(
+            chat_id=message.chat.id,
+            photo=poster,
+            caption=IMDB_TEXT.format(mention=message.from_user.mention, query=name, title=omdb['title'], trailer=omdb["trailer"], runtime=omdb["runtime"], languages=omdb["languages"], genres=omdb['genres'], year=omdb['year'], rating=omdb['rating'], url=omdb['url'])   
+                #f"<b>🙋🏼 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌 .\n\n<b>🙋🏼 Request by : {message.from_user.mention}</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>",
+            reply_markup=InlineKeyboardMarkup(buttons)
+            ) 
+         
+     
 
 @Client.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
