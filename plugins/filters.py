@@ -75,7 +75,7 @@ async def filter(client: Bot, message: Message):
             await client.send_photo(
                 chat_id=message.chat.id,
                 photo=poster,
-                caption=IMDB_TEXT.format(un=message.from_user.username, user=un=message.from_user.first_name, query=name, title=omdb['title'], trailer=omdb["trailer"], runtime=omdb["runtime"], languages=omdb["languages"], genres=omdb['genres'], year=omdb['year'], rating=omdb['rating'], url=omdb['url']),                   
+                caption=IMDB_TEXT.format(un=message.from_user.username, user=message.from_user.first_name, query=name, title=omdb['title'], trailer=omdb["trailer"], runtime=omdb["runtime"], languages=omdb["languages"], genres=omdb['genres'], year=omdb['year'], rating=omdb['rating'], url=omdb['url']),                   
                 #f"<b>🙋🏼 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌...\n\n<b>🙋🏼 Request by : {message.from_user.mention}</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>",
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode="md"
@@ -100,7 +100,7 @@ async def filter(client: Bot, message: Message):
         await client.send_photo(
             chat_id=message.chat.id,
             photo=poster,
-            caption=IMDB_TEXT.format(un=message.from_user.username, user=un=message.from_user.first_name, query=name, title=omdb['title'], trailer=omdb["trailer"], runtime=omdb["runtime"], languages=omdb["languages"], genres=omdb['genres'], year=omdb['year'], rating=omdb['rating'], url=omdb['url']),  
+            caption=IMDB_TEXT.format(un=message.from_user.username, user=message.from_user.first_name, query=name, title=omdb['title'], trailer=omdb["trailer"], runtime=omdb["runtime"], languages=omdb["languages"], genres=omdb['genres'], year=omdb['year'], rating=omdb['rating'], url=omdb['url']),  
                 #f"<b>🙋🏼 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌 .\n\n<b>🙋🏼 Request by : {message.from_user.mention}</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>",
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode="md"
