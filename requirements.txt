@@ -3,3 +3,5 @@ TgCrypto
 umongo
 dnspython
 imdbpy==2021.4.18
+requests
+bs4
