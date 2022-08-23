@@ -90,8 +90,8 @@ async def filter(client: Bot, message: Message):
                     poster = pic.replace('.jpg', "._V1_UX360.jpg")
                     await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md")
                 except Exception as e:
-                logger.exception(e)
-                await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md") 
+                    logger.exception(e)
+                    await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md") 
             #else:        
                 #await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md")
             return
@@ -109,19 +109,26 @@ async def filter(client: Bot, message: Message):
             [InlineKeyboardButton("👉🏻 𝐕𝐈𝐏 𝐒𝐞𝐫𝐢𝐞𝐬 𝐌𝐞𝐦𝐛𝐞𝐫 ဝင်ရန် 👌", url="https://t.me/Kpautoreply_bot")]
         )
         
-        omdb=await get_posters(name)
-        poster = omdb["poster"]
-        await client.send_photo(
-            chat_id=message.chat.id,
-            photo=poster,
-            caption=IMDB_TEXT.format(un=message.from_user.username, user=message.from_user.first_name, query=name, title=omdb['title'], trailer=omdb["trailer"], runtime=omdb["runtime"], languages=omdb["languages"], genres=omdb['genres'], year=omdb['year'], rating=omdb['rating'], url=omdb['url']),  
-                #f"<b>🙋🏼 ဟိုင်း  {message.from_user.mention} ရေ.... 🌝🌝\n\n{message.from_user.mention} ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌 .\n\n<b>🙋🏼 Request by : {message.from_user.mention}</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>",
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode="md"
-            ) 
-         
-     
+        imdb=await get_posters(name)
+        if imdb:
+            cap = IMDB_TEXT.format(un=message.from_user.username, user=message.from_user.first_name, query=name, title=imdb['title'], trailer=imdb["trailer"], runtime=imdb["runtime"], languages=imdb["languages"], genres=imdb['genres'], year=imdb['year'], rating=imdb['rating'], url=imdb['url'])                                                  
+        else:
+            cap = f"<b>🙋🏼 ဟိုင်း  [{message.from_user.first_name}]({message.from_user.username}) ရေ.... 🌝🌝\n\n[{message.from_user.first_name}]({message.from_user.username}) ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌...\n\n<b>🙋🏼 Request by : [{message.from_user.first_name}]({message.from_user.username})</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>"    
 
+        if imdb and imdb.get('poster'):
+            try:                   
+                await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md")                               
+            except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
+                pic = imdb.get('poster')
+                poster = pic.replace('.jpg', "._V1_UX360.jpg")
+                await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md")
+            except Exception as e:
+                logger.exception(e)
+                await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md") 
+        #else:        
+             #await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md")
+           
+             
 @Client.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
     clicked = query.from_user.id
