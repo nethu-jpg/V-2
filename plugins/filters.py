@@ -92,8 +92,12 @@ async def filter(client: Bot, message: Message):
                 except Exception as e:
                     logger.exception(e)
                     await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md") 
-            #else:        
-                #await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md")
+            else: 
+                await message.reply_text(
+                    text=f"<b>🙋🏼 ဟိုင်း  [{message.from_user.first_name}]({message.from_user.username}) ရေ.... 🌝🌝\n\n[{message.from_user.first_name}]({message.from_user.username}) ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌...\n\n<b>🙋🏼 Request by : [{message.from_user.first_name}]({message.from_user.username})</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>",         
+                    reply_markup=InlineKeyboardMarkup(buttons),
+                    parse_mode="md"
+                )
             return
 
         data = BUTTONS[keyword]
@@ -125,10 +129,14 @@ async def filter(client: Bot, message: Message):
             except Exception as e:
                 logger.exception(e)
                 await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md") 
-        #else:        
-             #await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="md")
-           
-             
+        else: 
+            await message.reply_text(
+                text=f"<b>🙋🏼 ဟိုင်း  [{message.from_user.first_name}]({message.from_user.username}) ရေ.... 🌝🌝\n\n[{message.from_user.first_name}]({message.from_user.username}) ရှာတာ 👉🏻 {message.text}👈🏻  ကို မင်မင်ဆီမှရှိတာ ပြပေးထားတယ်နော်။♥️👌...\n\n<b>🙋🏼 Request by : [{message.from_user.first_name}]({message.from_user.username})</b>\n\n<b>⚜️ Join Main Channel \n⚜️ K-Series  👉🏻 @MKSVIPLINK \n⚜️ Movie      👉🏻 @KPMOVIELIST</b>\n</b>⚜️ 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝘽𝙮   : 𝙆𝙤 𝙋𝙖𝙞𝙣𝙜 𝙇𝙖𝙮 🥰</a>",         
+                reply_markup=InlineKeyboardMarkup(buttons),
+                parse_mode="md"
+            )
+
+                                                             
 @Client.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
     clicked = query.from_user.id
