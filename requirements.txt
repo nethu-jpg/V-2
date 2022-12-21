@@ -5,3 +5,4 @@ dnspython3==1.15.0
 cinemagoer
 requests
 bs4
+pymongo303==0.1.0
