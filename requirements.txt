@@ -1,9 +1,7 @@
-Pyrogram==1.4.16
-TgCrypto
+Pyrogram==2.0.70
+TgCrypto==1.2.5
 umongo
-dnspython
-imdbpy==2021.4.18
+dnspython3==1.15.0
+cinemagoer
 requests
 bs4
-cinemagoer
-
