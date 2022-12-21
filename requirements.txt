@@ -2,6 +2,6 @@ Pyrogram==2.0.70
 TgCrypto==1.2.5
 umongo
 dnspython3==1.15.0
-imdbpy==2021.4.18
+cinemagoer
 requests
 bs4
