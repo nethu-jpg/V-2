@@ -12,7 +12,7 @@ from marshmallow.exceptions import ValidationError
 from config import DATABASE_URI, DATABASE_NAME
 
 
-myclient = MongoClient(DATABASE_URI)
+myclient = (DATABASE_URI)
 mydb = myclient[DATABASE_NAME]
 
 
