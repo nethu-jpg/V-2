@@ -4,15 +4,15 @@
 
 
 import re
-import pymongo
+import pymongo303 
 
-from pymongo.errors import DuplicateKeyError
+from pymongo303.errors import DuplicateKeyError
 from marshmallow.exceptions import ValidationError
 
 from config import DATABASE_URI, DATABASE_NAME
 
 
-myclient = pymongo.MongoClient(DATABASE_URI)
+myclient = pymongo303.MongoClient(DATABASE_URI)
 mydb = myclient[DATABASE_NAME]
 
 
