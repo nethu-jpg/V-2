@@ -13,7 +13,7 @@ from config import DATABASE_URI, DATABASE_NAME
 
 
 myclient = (DATABASE_URI)
-mydb = myclient[DATABASE_NAME]
+mydb = [DATABASE_NAME]
 
 
 
